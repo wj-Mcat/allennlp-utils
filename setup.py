@@ -7,7 +7,7 @@ import setuptools
 with open('../README.md', 'r') as fh:
     long_description = fh.read()
 
-version = "0.0.1dev1"
+version = "0.0.1dev2"
 
 setuptools.setup(
     name='allennlp-utils',
@@ -19,7 +19,8 @@ setuptools.setup(
     long_description_content_type='text/markdown',
     license='Apache-2.0',
     url='https://github.com/wj-Mcat/allennlp-utils',
-    packages=setuptools.find_packages(),
+    packages=setuptools.find_packages("src"),
+    package_dir={"": "src"},
     classifiers=[
         'Programming Language :: Python :: 3.7',
         'License :: OSI Approved :: Apache Software License',
