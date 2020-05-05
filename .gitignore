@@ -1,1 +1,4 @@
-./.idea
+./.idea/
+./build/
+./dist/
+./src/allennlp_utils.egg-info/

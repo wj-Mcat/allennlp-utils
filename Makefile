@@ -20,13 +20,14 @@ install:
 pytest:
 	pytest src/ tests/
 
-code:
-	code .
-
 .PHONY: dist
 dist:
 	python3 setup.py sdist bdist_wheel
 
+.PHONY: register
+register:
+	python setup.py register
+
 .PHONY: publish
 publish:
-	PATH=~/.local/bin:${PATH} twine upload dist/*
+	twine upload dist/*
